@@ -1,0 +1,6 @@
+[submodule "libsvm"]
+	path = libsvm
+	url = https://github.com/cjlin1/libsvm.git
+[submodule "MIACE"]
+	path = MIACE
+	url = https://github.com/GatorSense/MIACE.git
