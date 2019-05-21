@@ -5,7 +5,7 @@ addpath('.\MIACE')
 addpath('.\libsvm')
 
 trainparameters = trainParameters; %load training parameters
-
+postparameters = postParameters; %load post processing parameters
 
 soilfileParameter = loadFileByFolderParameters;%load training image having no root and set up saving result directory
 soilfileParameter.filelist = createFileList(soilfileParameter.soil_folder,soilfileParameter.fileTypes);%make a dataset list
@@ -26,9 +26,13 @@ if strcmp(trainparameters.mode,'MIACE')
     %%test miace%%
     for iter_test = 1:length(testFileParameters.test)
         scoremap = miace_det(iter_test,model_miace,testFileParameters,trainparameters);
-    %%plot results
+        thresholdResult = setThreshold(scoremap,postparameters);
+     %%plot results
         figure
-        imagesc(scoremap)      
+        subplot(1,2,1)
+        imagesc(scoremap)
+        subplot(1,2,2)
+        imagesc(thresholdResult)     
     end
 elseif strcmp(trainparameters.mode,'miSVM') 
     %train misvm%%    
@@ -36,9 +40,14 @@ elseif strcmp(trainparameters.mode,'miSVM')
     %%test miSVM%%    
     for iter_test = 1:length(testFileParameters.test)
         [label_misvm,accuracy,scoremap_miSVM] = test_svm(iter_test,model_miSVM,testFileParameters,trainparameters);   
-    %plot results miSVM
+        thresholdResult = setThreshold(scoremap_miSVM,postparameters);
+     %%plot results
         figure
-        imagesc(scoremap_miSVM)      
+        subplot(1,2,1)
+        imagesc(scoremap_miSVM)
+        subplot(1,2,2)
+        imagesc(thresholdResult)     
+        
     end 
     
 elseif strcmp(trainparameters.mode,'SVM') 
@@ -47,9 +56,13 @@ elseif strcmp(trainparameters.mode,'SVM')
     %%test SVM%%    
     for iter_test = 1:length(testFileParameters.test)
         [label_SVM,accuracy,scoremap_SVM] = test_svm(iter_test,model_SVM,testFileParameters,trainparameters);   
-    %%plot results SVM
+        thresholdResult = setThreshold(scoremap_SVM,postparameters);
+     %%plot results
         figure
-        imagesc(scoremap_SVM)     
+        subplot(1,2,1)
+        imagesc(scoremap_SVM)
+        subplot(1,2,2)
+        imagesc(thresholdResult)         
     end    
 
 elseif strcmp(trainparameters.mode,'RF')
@@ -58,10 +71,14 @@ elseif strcmp(trainparameters.mode,'RF')
     %%test RF%%    
     for iter_test = 1:length(testFileParameters.test)
         scoremap_RF = test_RF(iter_test,model_RF,testFileParameters,trainparameters);
-    %%plot results RF
+        thresholdResult = setThreshold(scoremap_RF,postparameters);
+     %%plot results
         figure
-        imagesc(scoremap_RF)    
-    end  
+        subplot(1,2,1)
+        imagesc(scoremap_RF)
+        subplot(1,2,2)
+        imagesc(thresholdResult)   
+    end 
 
 end
      
