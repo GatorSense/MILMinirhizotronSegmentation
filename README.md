@@ -92,7 +92,7 @@ This product is Copyright (c) 2018 G. Yu and A. Zare. All rights reserved.
 
 ## <a name="CitingMILMS"></a>Citing MILMinirhizotronSegmentation
 
-If you use the MIMRF multi-resolution fusion algorithm, please cite the following reference using the following BibTeX entries.
+If you use this algorithm, please cite the following reference using the following BibTeX entries.
 ```
 @article{yu2019root,
   title={Root Identification in Minirhizotron Imagery with Multiple Instance Learning},
