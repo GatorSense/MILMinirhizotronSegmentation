@@ -2,7 +2,7 @@ addpath('.\parameterfile')
 addpath('.\util')
 trainparameters = trainParameters; %load training parameters
 datasetFileParameters = loadFileByFolderParameters; %load file and set up saving result directory
-datasetFileParameters.read_folder = [fileParameter.soil_folder,fileParameter.root_folder];%combine dataset from image having root and image having no root
+datasetFileParameters.read_folder = [datasetFileParameters.soil_folder,datasetFileParameters.root_folder];%combine dataset from image having root and image having no root
 datasetFileParameters.filelist = createFileList(datasetFileParameters.read_folder,datasetFileParameters.fileTypes);%make a dataset list
 
 

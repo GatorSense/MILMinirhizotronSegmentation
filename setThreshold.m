@@ -33,12 +33,10 @@ stats = regionprops(image_idx_9_10_CC,'Eccentricity','Perimeter','Area');
 stats_cell = struct2cell(stats);
 stats_mat = cell2mat(stats_cell);
 for j = 1:length(image_idx_9_10_CC.PixelIdxList)
-    if any(stats_mat(1,j) > postparameters.size) && any(stats_mat(2, j) > postparameters.ecc)
-%                     if any(stats_mat(2, j) > Thresh_Ecc(k))
+    if any(stats_mat(1,j) > postparameters.sizeth) && any(stats_mat(2, j) > postparameters.eccth)
         selectImageVec(image_idx_9_10_CC.PixelIdxList{j}) = 1;
     end
 end
 thresholdResult = reshape(selectImageVec,rows,cols);
-thresholdResult = 1-thresholdResult;
 
 end

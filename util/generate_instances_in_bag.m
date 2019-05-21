@@ -19,7 +19,8 @@ function [bagsInsNum,bagLabels] = generate_instances_in_bag(bag,numBags,file)
 % This product is Copyright (c) 2019 University of Florida
 % All rights reserved.
     
-bagsInsNum = {};
+bagsInsNum = cell(1,numBags);
+bagInsLabel = cell(1,numBags);
 bagLabels = [];
 
 myGT = load(file.bwFileName);
@@ -36,21 +37,24 @@ segments = myfsegments.(tempsegments{1});
 
 
 [rows,cols] = size(BW2);
-inst_labels = BW2((features(:,3)-1)*rows +features(:,2)) ; %%instance label
+inst_labels = BW2((features(:,3)-1)*rows +features(:,2)); %%instance label
+inst_ind = segments((features(:,3)-1)*rows +features(:,2));
+instance_bag_ind = bag((features(:,3)-1)*rows +features(:,2));
+for iter_instance = 1: length(inst_ind)
+    bagsInsNum{instance_bag_ind(iter_instance)}(end+1)= inst_ind(iter_instance);
+    bagInsLabel{instance_bag_ind(iter_instance)}(end+1) = inst_labels(iter_instance);
+end
 
-for j = 1:numBags   
-    inst_ind = find_ins_in_bag(features,segments,bag,j);
-     if (~isempty(inst_ind))
-        bagsInsNum{end+1} = inst_ind;
-        [~,loc] = find(features(:,1)' == inst_ind);
-        if any(sum(inst_labels(loc))>0)
+bagsInsNum = bagsInsNum(not(cellfun(@isempty,bagsInsNum)));
+bagInsLabel = bagInsLabel(not(cellfun(@isempty,bagInsLabel)));
+
+for iter_bag = 1:length(bagInsLabel)       
+        temBagInsLabel = bagInsLabel{iter_bag};     
+        if any(sum(temBagInsLabel)>0)
            bagLabels(1,end+1) = 1;
         else
            bagLabels(1,end+1) = 0;
         end
-
-      end
-
 end
 
 
