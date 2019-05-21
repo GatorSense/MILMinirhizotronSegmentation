@@ -82,3 +82,8 @@ Run 'Demo1_mainMulnstanceOneBag.m' in MATLAB to train and test MIL model for the
         └── train_test_split.m  //split dataset to train and test
 
 ```
+## License
+
+This source code is licensed under the license found in the [`LICENSE`](LICENSE) file in the root directory of this source tree.
+
+This product is Copyright (c) 2018 G. Yu and A. Zare. All rights reserved.
