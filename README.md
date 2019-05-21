@@ -6,6 +6,8 @@ _Guohao Yu, Alina Zare_
 
 If you use this code, cite it: Guohao Yu & Alina Zare. (2019, May 21). GatorSense/MILMinithizotronSegmentation: Initial Release (Version v1.0). Zenodo.
 
+[[`arXiv`](https://arxiv.org/pdf/1903.03207.pdf)] [[`BibTeX`](#CitingMILMS)]
+
 In this repository, we provide the code used in paper "Root Identification in Minirhizotron Imagery with Multiple Instance Learning"
 
 ## Installation Prerequisites
@@ -21,6 +23,11 @@ Download the VLFeat binary package "vlfeat-0.9.21-bin.tar.gz" , extracted in the
 Setup the LIBSVM. Run ./libsvm/matlab/make.m 
 
 (following https://github.com/cjlin1/libsvm/blob/master/matlab/README)
+
+(3) MIACE
+
+https://github.com/GatorSense/MIACE
+
 
 ## Demo
 For bag size same as instance or image
@@ -86,4 +93,16 @@ Run 'Demo1_mainMulnstanceOneBag.m' in MATLAB to train and test MIL model for the
 
 This source code is licensed under the license found in the [`LICENSE`](LICENSE) file in the root directory of this source tree.
 
-This product is Copyright (c) 2018 G. Yu and A. Zare. All rights reserved.
+This product is Copyright (c) 2019 G. Yu and A. Zare. All rights reserved.
+
+## <a name="CitingMILMS"></a>Citing MILMinirhizotronSegmentation
+
+If you use this algorithm, please cite the following reference using the following BibTeX entries.
+```
+@article{yu2019root,
+  title={Root Identification in Minirhizotron Imagery with Multiple Instance Learning},
+  author={Guohao Yu and Alina Zare and Hudanyun Sheng and Roser Matamala and Joel Reyes-Cabrera and Felix B. Frischi and Thomas E. Juenger},
+  journal={arXiv preprint arXiv:1903.03207},
+  year={2019}
+}
+```
