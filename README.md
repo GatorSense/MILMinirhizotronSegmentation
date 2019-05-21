@@ -24,6 +24,11 @@ Setup the LIBSVM. Run ./libsvm/matlab/make.m
 
 (following https://github.com/cjlin1/libsvm/blob/master/matlab/README)
 
+(3) MIACE
+
+https://github.com/GatorSense/MIACE
+
+
 ## Demo
 For bag size same as instance or image
 
