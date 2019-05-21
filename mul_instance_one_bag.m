@@ -63,7 +63,7 @@ function [bag, label] = mul_instance_one_bag(datasetParameters, trainparameters)
         if length(rand_pos_seq) == 0
             while count <= trainparameters.numberofnegtivebag%trainparameters.numberofnegtivebag(datasetParameters.train(iter_trainImage))
                 super_ind = bagsInsNum{rand_neg_seq(count)};
-                [rloc,cloc] = find(features(:,1)' == super_ind);
+                [rloc,cloc] = find(features(:,1)' == super_ind');
                 bag{iter_trainImage}{count} = norm_list(cloc,:);
                 label{iter_trainImage}(count) = 0;
                 count = count+1;
@@ -71,7 +71,7 @@ function [bag, label] = mul_instance_one_bag(datasetParameters, trainparameters)
         else
             while count <= numberofpositivebag%trainparameters.numberofpositivebag(datasetParameters.train(iter_trainImage))
                 super_ind = bagsInsNum{rand_pos_seq(count)};
-                [rloc,cloc] = find(features(:,1)' == super_ind);
+                [rloc,cloc] = find(features(:,1)' == super_ind');
                 bag{iter_trainImage}{count} = norm_list(cloc,:);
                 label{iter_trainImage}(count) = 1;
                 count = count+1;
@@ -80,7 +80,7 @@ function [bag, label] = mul_instance_one_bag(datasetParameters, trainparameters)
             while count <= numberofpositivebag+trainparameters.numberofnegtivebag%trainparameters.numberofpositivebag(datasetParameters.train(iter_trainImage)) +trainparameters.numberofnegtivebag(datasetParameters.train(iter_trainImage))             
                 %super_ind = bagsInsNum{rand_neg_seq(count - trainparameters.numberofpositivebag(datasetParameters.train(iter_trainImage)))};
                 super_ind = bagsInsNum{rand_neg_seq(count - numberofpositivebag)};
-                [rloc,cloc] = find(features(:,1)' == super_ind);            
+                [rloc,cloc] = find(features(:,1)' == super_ind');            
                 bag{iter_trainImage}{count} = norm_list(cloc,:);
                 label{iter_trainImage}(count) = 0;
                 count = count+1;

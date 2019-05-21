@@ -19,4 +19,6 @@ file = readFileFromFolder(iter_dataset,datasetFileParameters);%load one file
 [bagsInsNum,bagLabels] = generate_instances_in_bag(bag,numBags,file);%put instance into bag 
    
 save(file.insInBagFileName,'bagsInsNum','bagLabels')
+
+fprintf('procee the %d image \n',iter_dataset);
 end
