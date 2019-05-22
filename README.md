@@ -16,7 +16,7 @@ This code uses
 
 (1)VLFeat 0.9.21 open source library from matlab
 
-Download the VLFeat binary package "vlfeat-0.9.21-bin.tar.gz" , extracted in the current folder and setup it following  https://github.com/vlfeat/vlfeat/blob/master/README.md
+Download the VLFeat binary package "vlfeat-0.9.21-bin.tar.gz" , extracted to the current folder and setup it following  https://github.com/vlfeat/vlfeat/blob/master/README.md
 
 (2)LIBSVM library from matlab
 
