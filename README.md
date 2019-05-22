@@ -4,7 +4,7 @@
 
 _Guohao Yu, Alina Zare_
 
-If you use this code, cite it: Guohao Yu & Alina Zare. (2019, May 21). GatorSense/MILMinithizotronSegmentation: Initial Release (Version v1.0). Zenodo.
+If you use this code, cite it: Guohao Yu & Alina Zare. (2019, May 21). GatorSense/MILMinithizotronSegmentation: Initial Release (Version v1.0). Zenodo.https://zenodo.org/badge/latestdoi/187858064 [![DOI](https://zenodo.org/badge/187858064.svg)](https://zenodo.org/badge/latestdoi/187858064)
 
 [[`arXiv`](https://arxiv.org/pdf/1903.03207.pdf)] [[`BibTeX`](#CitingMILMS)]
 
