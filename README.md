@@ -30,7 +30,7 @@ https://github.com/GatorSense/MIACE
 
 
 ## Demo
-For bag size same as instance or image
+case 1: each bag has one inestance or each image per bag
 
 step 1:
 Run 'Demo_GenearteInstance.m' in MATLAB to generate instance and instance features for MIL algorithm
@@ -40,7 +40,7 @@ Run 'Demo3_mainOneInstanceOneBag.m' in MATLAB to train and test MIL model for th
 
 or Run 'Demo2_mainOneImageOneBag.m' in MATLAB to train and test MIL model for the case that one image per bag
 
-For other bag size
+case 2: there are multiple instances per bag
 
 step 1:
 Run 'Demo_GenearteInstance.m' in MATLAB to generate instance and instance features for MIL algorithm
