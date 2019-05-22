@@ -102,7 +102,7 @@ If you use this algorithm, please cite the following reference using the followi
 @article{yu2019root,
   title={Root Identification in Minirhizotron Imagery with Multiple Instance Learning},
   author={Guohao Yu and Alina Zare and Hudanyun Sheng and Roser Matamala and Joel Reyes-Cabrera and Felix B. Frischi and Thomas E. Juenger},
-  journal={arXiv preprint arXiv:1903.03207},
+  journal={under review},
   year={2019}
 }
 ```
