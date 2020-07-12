@@ -99,10 +99,11 @@ This product is Copyright (c) 2019 G. Yu and A. Zare. All rights reserved.
 
 If you use this algorithm, please cite the following reference using the following BibTeX entries.
 ```
-@article{yu2019root,
-  title={Root Identification in Minirhizotron Imagery with Multiple Instance Learning},
-  author={Guohao Yu and Alina Zare and Hudanyun Sheng and Roser Matamala and Joel Reyes-Cabrera and Felix B. Frischi and Thomas E. Juenger},
-  journal={under review},
-  year={2019}
+@inproceedings{Yu2020RootIdentificationMIL,
+title={Root Identification in Minirhizotron Imagery with Multiple Instance Learning},
+author={Guohao Yu and Alina Zare and Hudanyun Sheng and Roser Matamala and Joel Reyes-Cabrera and Felix B. Fritschi and Thomas E. Juenger},  
+journal = {Machine Vision and Applications},  
+volume = {31},  
+year={2020}
 }
 ```
