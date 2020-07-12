@@ -6,7 +6,7 @@ _Guohao Yu, Alina Zare_
 
 If you use this code, cite it: Guohao Yu & Alina Zare. (2019, May 21). GatorSense/MILMinithizotronSegmentation: Initial Release (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3122427 [![DOI](https://zenodo.org/badge/187858064.svg)](https://zenodo.org/badge/latestdoi/187858064)
 
-[[`arXiv`](https://arxiv.org/pdf/1903.03207.pdf)] [[`BibTeX`](#CitingMILMS)]
+[[`Paper`](https://link.springer.com/article/10.1007/s00138-020-01088-z)] [[`BibTeX`](#CitingMILMS)]
 
 In this repository, we provide the code used in paper "Root Identification in Minirhizotron Imagery with Multiple Instance Learning"
 
